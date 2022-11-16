@@ -53,7 +53,7 @@ export default function App() {
                 <Text style={styles.text}>{slide.text}</Text>
                 {slide.image && (
                   <Image
-                    source={require("./assets/animals.png")}
+                    source={slide.url}
                     style={styles.image}
                     ></Image>
                     )}
@@ -67,30 +67,30 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  slideCointainer: {
+    flex: 1,
+    alignItems: "center",
+  },
   item: {
     marginTop: Constants.statusBarHeight,
     flex: 1,
     fontSize: 150,
     width: Dimensions.get("window").width,
   },
-  slideCointainer: {
-    flex: 1,
-    alignItems: "center",
-  },
   containerLogo: {
     flex: 1,
     alignItems: "flex-end",
-    justifyContent: "flex-start",
-  },
-  container: {
-    flex: 2,
-    alignItems: "center",
     justifyContent: "flex-start",
   },
   logo: {
     width: 67,
     height: 60,
     margin: 40,
+  },
+  container: {
+    flex: 2,
+    alignItems: "center",
+    justifyContent: "flex-start",
   },
   text: {
     color: "#FFF",
