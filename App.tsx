@@ -1,5 +1,3 @@
-// import SlideView1 from './components/SlideView1';
-// import SlideView2 from './components/SlideView2';
 import Constants from "expo-constants";
 import {
   StyleSheet,
@@ -20,6 +18,7 @@ export default function App() {
       pagingEnabled={true}
       data={slidesData}
       renderItem={({ item: slide }) => (
+        // Recorre cada slide y renderiza los datos respectivos
         <View
         style={{
           backgroundColor: slide.backgroundColor,
@@ -41,7 +40,9 @@ export default function App() {
                 )}
               </View>
               <View style={styles.container}>
+                
                 {slide.register && 
+                //Si el slide es de registro renderiza un titulo y una imagén extra.
                 <>
                   <Text style={styles.text}>Register</Text>
                   <Image
